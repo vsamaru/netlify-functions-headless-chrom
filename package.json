@@ -1,26 +1,17 @@
 {
-  "name": "headless-chrome-netlify-functions",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
+    "chrome-aws-lambda": "^1.11.1",
+    "puppeteer-core": "^1.11.0",
     "analytics": "^0.3.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "prezip": "rm -rf functions-build && mkdir functions-build",
-    "zip": "cd functions/chrome && npm install && chmod -R 777 node_modules && zip -r chrome.zip *",
-    "postzip": "mv functions/chrome/chrome.zip functions-build",
-    "prebuild": "npm run zip",
-    "build": "react-scripts build",
-    "docs": "md-magic --path '**/*.md' --ignore 'node_modules'"
+    "build": "react-scripts build"
   },
   "main": "index.js",
   "devDependencies": {
     "markdown-magic": "^1.0.0"
-  },
-  "author": "",
-  "license": "MIT"
+  }
 }
